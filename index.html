@@ -14,13 +14,31 @@
   </head>
   <body>
     <div id="map"></div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <!-- <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDe812R8BbHc48qZW6cFPx1jPyXDSbNhEc",
+        authDomain: "fir-map-test-74d99.firebaseapp.com",
+        databaseURL: "https://fir-map-test-74d99.firebaseio.com",
+        projectId: "fir-map-test-74d99",
+        storageBucket: "",
+        messagingSenderId: "134299388275",
+        appId: "1:134299388275:web:da4055298e705754"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script> -->
+    <script src="scripts/firebasemap.js"></script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB46WaiPwVNWFHlUwS10FMiRHUQb02JqcY&libraries=visualization&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB46WaiPwVNWFHlUwS10FMiRHUQb02JqcY&libraries=visualization&callback=initMap">
     </script>
-
-    <script>
-      // The JavaScript code that creates the Firebase map goes here.
-    </script>
-
   </body>
 </html>
