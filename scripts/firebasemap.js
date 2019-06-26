@@ -5,7 +5,7 @@ var firebaseConfig = {
   authDomain: "fir-map-test-74d99.firebaseapp.com",
   databaseURL: "https://fir-map-test-74d99.firebaseio.com",
   projectId: "fir-map-test-74d99",
-  storageBucket: "",
+  storageBucket:  "fir-map-test-74d99.appspot.com",
   messagingSenderId: "134299388275",
   appId: "1:134299388275:web:da4055298e705754"
 };
@@ -99,6 +99,7 @@ function initAuthentication(onAuthSuccess) {
     if (user) {
       data.sender = user.uid;
       onAuthSuccess();
+      console.log('success');
     } else {
       // User is signed out.
     }
@@ -130,7 +131,7 @@ function initFirebase(heatmap) {
       heatmap.getData().push(point);
 
       // Request entries older than expiry time (10 minutes).
-      var expiryMs = Math.max(60 * 10 * 1000 - elapsed, 0);
+      var expiryMs = Math.max(60 * 10 * 1000 - elapsedMs, 0);
       // Set client timeout to remove the point after a certain time.
       window.setTimeout(function() {
         // Delete the old point from the database.
